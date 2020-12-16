@@ -21,7 +21,7 @@ console.log(
   `В литве всего со всей айти сферы набигает такая сумма налогов ${getTotalTaxes.call(litva)}`,
 );
 
-function getMySalary(country) {
+setInterval(function getMySalary(ukraine) {
   const myMaxSalary = 2000;
   const myMinSalary = 1500;
   const salary = +(Math.random() * (myMaxSalary - myMinSalary + 1) +
@@ -31,12 +31,7 @@ function getMySalary(country) {
     mysalary: salary,
     taxes: this.tax,
     profit: myProfit,
-  });
-}
+  },)
+},10000);
 
-setInterval(
-  function() {
-    getMySalary.call(ukraine);
-  },
-  10000,
-);
+
